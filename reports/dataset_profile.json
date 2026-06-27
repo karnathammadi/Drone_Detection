@@ -1,0 +1,322 @@
+{
+  "dataset_root": "C:\\Users\\nagas\\Downloads\\Drone_Detection\\Drone_Detection\\data",
+  "total_images": 16298,
+  "total_annotations": 17658,
+  "dataset_size_mb": 611.64,
+  "classes": {
+    "0": "UAV",
+    "1": "side-by-side rotor",
+    "2": "single rotor",
+    "3": "tandem rotor"
+  },
+  "image_counts": {
+    "train": 13661,
+    "val": 2637,
+    "test": 0
+  },
+  "label_counts": {
+    "train": 13661,
+    "val": 2637,
+    "test": 0
+  },
+  "annotation_counts": {
+    "train": 14790,
+    "val": 2868
+  },
+  "class_counts": {
+    "UAV": 15609,
+    "side-by-side rotor": 270,
+    "single rotor": 1095,
+    "tandem rotor": 684
+  },
+  "empty_label_files": 0,
+  "missing_images": [],
+  "missing_labels": [],
+  "corrupted_images": [],
+  "duplicate_images": [
+    [
+      "images\\train\\005600_jpg.rf.70349747a8f5c8fcd8ff17c98bf58d5e.jpg",
+      "images\\train\\005600_jpg.rf.baf19e26828105ae609c48f5f3e7f167.jpg"
+    ],
+    [
+      "images\\train\\009348_jpg.rf.29a8b313832eee4aa772b5143e20def1.jpg",
+      "images\\train\\009348_jpg.rf.ab78d91fd4621f555846739936c94a00.jpg"
+    ],
+    [
+      "images\\train\\009348_jpg.rf.2d7751150cc62d4ef45e630bcd62d336.jpg",
+      "images\\train\\009348_jpg.rf.34ec79fd005143f8db8dba4ed2681f5b.jpg"
+    ],
+    [
+      "images\\train\\2021-09-06-Teknofest-Savasan-IHA-yarismasi-basladi-3-1024x768_jpg.rf.5b5212d7898ef02faa33388038d73906.jpg",
+      "images\\train\\2021-09-06-Teknofest-Savasan-IHA-yarismasi-basladi-3-1024x768_jpg.rf.ca2a8ee88fdd285888a31f5b2271ac27.jpg"
+    ],
+    [
+      "images\\train\\2022-06-13-193-_png_jpg.rf.1acbec40b1c7d7fc465c0435ca688603.jpg",
+      "images\\train\\2022-06-13-193-_png_jpg.rf.d876d0c8eef8d80adc78819f0c33e8aa.jpg"
+    ],
+    [
+      "images\\train\\2022-06-13-461-_png_jpg.rf.9058db9c2a930089fbf574d92b2607a2.jpg",
+      "images\\train\\2022-06-13-461-_png_jpg.rf.b997bd4d97e205e1e83ca41060e34024.jpg"
+    ],
+    [
+      "images\\train\\41sKJKjHVVL-_SL1000__jpg.rf.1da5a3044b5f8c791f43868b81483608.jpg",
+      "images\\val\\41sKJKjHVVL-_SL1000__jpg.rf.61719527a00e7bbb5f0824dd0abb7fbf.jpg"
+    ],
+    [
+      "images\\train\\a-163-_jpg.rf.199d3abff4f0ab00b95123d75f117f6e.jpg",
+      "images\\train\\a-163-_jpg.rf.f9e98bea74e0e8e04e5a2097132b9ca7.jpg"
+    ],
+    [
+      "images\\train\\a-163-_jpg.rf.704cae722d2776c34569cb36ae1777dc.jpg",
+      "images\\train\\a-163-_jpg.rf.b69692745b332a3e4268255fa96fe6b9.jpg"
+    ],
+    [
+      "images\\train\\a-163-_jpg.rf.9b86d25a78156c901b492ad363786cb0.jpg",
+      "images\\val\\a-163-_jpg.rf.ee5f23c789fec9529f70cb7fa3a006cd.jpg"
+    ],
+    [
+      "images\\train\\a-194-_jpg.rf.b8dceb3654f15a1c42635f3be57a346c.jpg",
+      "images\\train\\a-194-_jpg.rf.f1a999bb05be6e9a5d8ed15012728ae7.jpg"
+    ],
+    [
+      "images\\train\\a-213-_jpg.rf.27617686b9c6ad3e33a732906db5c1da.jpg",
+      "images\\train\\a-213-_jpg.rf.690e727772610e840cc26b26717bd37c.jpg"
+    ],
+    [
+      "images\\train\\a-215-_jpg.rf.45d9ab7adc7a6c75972fb84465970d44.jpg",
+      "images\\train\\a-215-_jpg.rf.d18c3f224f0dc291c6383eb9ab8e6f42.jpg"
+    ],
+    [
+      "images\\train\\a-218-_jpg.rf.1f5502adfb4e60835cbf44b3f147939c.jpg",
+      "images\\val\\a-218-_jpg.rf.4032f2d84bba8e48c77311342fba6f24.jpg"
+    ],
+    [
+      "images\\train\\a-225-_jpg.rf.a4be8589dc6ea69fafa4d01b0685f32b.jpg",
+      "images\\train\\a-225-_jpg.rf.b29b50212cd2324c9cabf4a26d844450.jpg"
+    ],
+    [
+      "images\\train\\a-24-_jpg.rf.81da6f6d56e131fbcf0f6a44152c5536.jpg",
+      "images\\train\\a-24-_jpg.rf.b831f0462abb92648d5c51f0c914b01d.jpg"
+    ],
+    [
+      "images\\train\\a-24-_jpg.rf.b92540d8bfac427058fc85af92b190d3.jpg",
+      "images\\train\\a-24-_jpg.rf.de8bff7e984ef641170a1ee04e5eb868.jpg"
+    ],
+    [
+      "images\\train\\a-246-_jpg.rf.1f3c9d0bd6413482f19e03edfe5907ce.jpg",
+      "images\\val\\a-246-_jpg.rf.7807f20fdd3bc728a156ec3934e1f7a4.jpg"
+    ],
+    [
+      "images\\train\\a-286-_jpg.rf.085e559cd22eb42cf4943330cd89e898.jpg",
+      "images\\train\\a-286-_jpg.rf.33bf1e96b42cbf2a5cea3a63274b8dcc.jpg"
+    ],
+    [
+      "images\\train\\a-286-_jpg.rf.3872c61b5c5fedf55bb946d7595f4e0f.jpg",
+      "images\\train\\a-286-_jpg.rf.abec47b83142ef10ba7cd4628eeb08dc.jpg"
+    ],
+    [
+      "images\\train\\a-287-_jpg.rf.65bb0317dc6f1731e0cf493b89249433.jpg",
+      "images\\val\\a-287-_jpg.rf.de122234c8a334d2979aef8e9ed61db6.jpg"
+    ],
+    [
+      "images\\train\\a-3-_jpg.rf.6528098f0a1aa1db81208b104fb311ea.jpg",
+      "images\\val\\a-3-_jpg.rf.e5f87f83379aea9cab77b57bc66ce571.jpg"
+    ],
+    [
+      "images\\train\\a-308-_jpg.rf.a9c1cf66d1e4693f9686b9b8f40b8b18.jpg",
+      "images\\train\\a-308-_jpg.rf.c8c20816a31e6b810cdca7efb8388fda.jpg"
+    ],
+    [
+      "images\\train\\a-328-_jpg.rf.314f66c8551cac631d5a8700f7a4f2d7.jpg",
+      "images\\train\\a-328-_jpg.rf.4fbe645e0a8c8217fbd3743da5fcafb7.jpg"
+    ],
+    [
+      "images\\train\\a-329-_jpg.rf.57ce401ab6d48fa59201124cf42ae582.jpg",
+      "images\\val\\a-329-_jpg.rf.34a2440070754fb01a9525bcf2cb6c2b.jpg"
+    ],
+    [
+      "images\\train\\a-64-_jpg.rf.0e5b424321b6b7d5cdf906e300c097fd.jpg",
+      "images\\train\\a-64-_jpg.rf.68df6ff7c2de0e899c771d55785b0cc6.jpg"
+    ],
+    [
+      "images\\train\\a-88-_jpg.rf.cdc52c0d015b5cac21f8797b8a5fe9dc.jpg",
+      "images\\val\\a-88-_jpg.rf.4850dfba3291f7c87d172435f1f7a543.jpg"
+    ],
+    [
+      "images\\train\\aug-_1311_1163053_jpg.rf.8e2ead6e772da570e9a9b8d689eb69c8.jpg",
+      "images\\val\\aug-_1311_1163053_jpg.rf.bcb126791c34bb0ec59a1e744691adec.jpg"
+    ],
+    [
+      "images\\train\\aug-_1553_4713577_jpg.rf.5830f7d7d779d6ddef725e68309df9aa.jpg",
+      "images\\val\\aug-_1553_4713577_jpg.rf.7c5e81977ce3428bfeac604de498767a.jpg"
+    ],
+    [
+      "images\\train\\aug-_1730_7529456_jpg.rf.d95abbc271c440f28c2712a9f5e3355f.jpg",
+      "images\\train\\aug-_1730_7529456_jpg.rf.f567cd2b62a27aead417d7608c6aa039.jpg"
+    ],
+    [
+      "images\\train\\aug-_487_5983312_jpg.rf.21ede28f7e12c6a77125d9f5c2f8bac3.jpg",
+      "images\\train\\aug-_487_5983312_jpg.rf.8c8e36f492a66bfe48468badc852ba20.jpg"
+    ],
+    [
+      "images\\train\\aug2-_1098_7230796_jpg.rf.ac30b489fdd3e3a121f442194905d853.jpg",
+      "images\\train\\aug2-_1098_7230796_jpg.rf.bdbce0e114a105d0245cf333637a9aad.jpg"
+    ],
+    [
+      "images\\train\\aug2-_1299_2098905_jpg.rf.3d58dd784b5e327a0947b236208d6e62.jpg",
+      "images\\val\\aug2-_1299_2098905_jpg.rf.1ca0342bd8d0acc6be49fcaa4cbc743d.jpg"
+    ],
+    [
+      "images\\train\\best-fixed-wing-drones_jpg.rf.06dc821885bcb95a8cca2629eac468d3.jpg",
+      "images\\train\\best-fixed-wing-drones_jpg.rf.916f8c3c12ba40b22967f568a7ab6f5f.jpg"
+    ],
+    [
+      "images\\train\\Ekran-Goruntusu-191-_png_jpg.rf.37213c19a1bdf21e68fd704e026fe0e5.jpg",
+      "images\\val\\Ekran-Goruntusu-191-_png_jpg.rf.e0f3a325aeea891e8ec89429ad2cefd0.jpg"
+    ],
+    [
+      "images\\train\\Ekran-Goruntusu-191-_png_jpg.rf.822bd004c17faf61f59563282142aeee.jpg",
+      "images\\train\\Ekran-Goruntusu-191-_png_jpg.rf.9b45a98589942a5a6eef06f8483294a3.jpg"
+    ],
+    [
+      "images\\train\\Ekran-Goruntusu-191-_png_jpg.rf.9a534afb5bacca92625d2daaf62d73ff.jpg",
+      "images\\train\\Ekran-Goruntusu-191-_png_jpg.rf.f536b9b20a1fba7c482f5f279f727744.jpg"
+    ],
+    [
+      "images\\train\\Ekran-goruntusu-2022-12-06-143912_jpg.rf.20d02502c730a10f865e4d0e8b6dd04b.jpg",
+      "images\\train\\Ekran-goruntusu-2022-12-06-143912_jpg.rf.aae170c2fa8bb5e55c6487d2a787848f.jpg"
+    ],
+    [
+      "images\\train\\Ekran-goruntusu-2022-12-06-144127_jpg.rf.e509f0d7c16a6efd199125ac89411209.jpg",
+      "images\\val\\Ekran-goruntusu-2022-12-06-144127_jpg.rf.77bf71009a013b7aa5c9c21c422672a4.jpg"
+    ],
+    [
+      "images\\train\\Ekran-Goruntusu-232-_png_jpg.rf.00b4fb49c479150cc1816ea2029d517f.jpg",
+      "images\\train\\Ekran-Goruntusu-232-_png_jpg.rf.9a9fbe8068600af161a08d5ca9850043.jpg"
+    ],
+    [
+      "images\\train\\Ekran-Goruntusu-237-_png_jpg.rf.0dce91a3a68df364c6ca057124543487.jpg",
+      "images\\train\\Ekran-Goruntusu-237-_png_jpg.rf.a6f0ce12dac71e6b6e5b28be2b4b312b.jpg"
+    ],
+    [
+      "images\\train\\Ekran-Goruntusu-94-_png_jpg.rf.1b86246cc005dc07dc33a499326d00a6.jpg",
+      "images\\train\\Ekran-Goruntusu-94-_png_jpg.rf.bb9b1604f2116ed0dbbaa8bca2d1f524.jpg"
+    ],
+    [
+      "images\\train\\Fixed-Wing-Drones_jpg.rf.7e8823d3499995d8631b52a84c381a0d.jpg",
+      "images\\val\\Fixed-Wing-Drones_jpg.rf.bdd913554399efa23641d47415f5bd5b.jpg"
+    ],
+    [
+      "images\\train\\images101_jpg.rf.1b475cd74f9e8f1a87a6b02c4c1857f2.jpg",
+      "images\\val\\images101_jpg.rf.35f7ba0ab2368d7e2a1a658cda8af617.jpg"
+    ],
+    [
+      "images\\train\\images15_jpg.rf.2b89064252008ea75c90740db69b7265.jpg",
+      "images\\val\\images15_jpg.rf.3abb6b972f20a12e79134624620cc901.jpg"
+    ],
+    [
+      "images\\train\\images15_jpg.rf.6b7aae856da6bb1cfb941171972829a6.jpg",
+      "images\\train\\images15_jpg.rf.fe6a5f42258adf0581d4d4c60047a9ed.jpg"
+    ],
+    [
+      "images\\train\\images66_jpg.rf.7464796abac0ed9ccb6b22fcea3cbd53.jpg",
+      "images\\train\\images66_jpg.rf.ce1f8c737aa69ae6bfb093595700a395.jpg"
+    ],
+    [
+      "images\\train\\images91_jpg.rf.0ffed2c6f9b7bcd34168f84b3d6f5312.jpg",
+      "images\\train\\images91_jpg.rf.7bc929fa338917db7af54e047ff1537e.jpg"
+    ],
+    [
+      "images\\train\\images91_jpg.rf.5ed7e4f903c40bc9e839b2ccf849a7ef.jpg",
+      "images\\val\\images91_jpg.rf.273f7d06e60a990c64dbf145e678ae85.jpg"
+    ],
+    [
+      "images\\train\\images_jpg.rf.d30e71fe7329e8e270e0a346e7b21e76.jpg",
+      "images\\val\\images_jpg.rf.adfaae97efe1663d0bbd5ad056b3262c.jpg"
+    ],
+    [
+      "images\\train\\IMG_20220527_153721_jpg.rf.07af107078e88993cc39a932b60fe917.jpg",
+      "images\\train\\IMG_20220527_153721_jpg.rf.e36435fc8205358a92f5d4823697a098.jpg"
+    ],
+    [
+      "images\\train\\IMG_20220527_153721_jpg.rf.8c3c7ccaaafadb198b1931bda9ef3ce1.jpg",
+      "images\\train\\IMG_20220527_153721_jpg.rf.fb2f047a749a74c61a778dcbfc8d8591.jpg"
+    ],
+    [
+      "images\\train\\IMG_20220527_153723_jpg.rf.076ffce3dd1e40f8c9ecee07db017a71.jpg",
+      "images\\train\\IMG_20220527_153723_jpg.rf.4b925c9ac8664de84894c6d835d5363e.jpg"
+    ],
+    [
+      "images\\train\\IMG_20220527_153724_jpg.rf.3d227d9a04ce90f21cf9a5bf1ddddab0.jpg",
+      "images\\val\\IMG_20220527_153724_jpg.rf.1fa1d225e6ca096ef593de66995740a5.jpg"
+    ],
+    [
+      "images\\train\\IMG_20220527_153724_jpg.rf.708ea56cbdbedd254e06ce1d9dcccb95.jpg",
+      "images\\val\\IMG_20220527_153724_jpg.rf.c5d84f369080dd417b497988e0cd0a5b.jpg"
+    ],
+    [
+      "images\\train\\IMG_20220527_154018_jpg.rf.a7510811ce8af2a5561b0a462b01e8a6.jpg",
+      "images\\val\\IMG_20220527_154018_jpg.rf.8ebbf7e2959cf074d83f38dbed1aaf8a.jpg"
+    ],
+    [
+      "images\\train\\IMG_20220527_154635_jpg.rf.5a89665e40642b45af87f0e76722b176.jpg",
+      "images\\train\\IMG_20220527_154635_jpg.rf.a90be15273c43121b493038729bd590d.jpg"
+    ],
+    [
+      "images\\train\\IMG_20221205_182145_jpg.rf.5c0ff6d051f43249fc6b253710e97e14.jpg",
+      "images\\train\\IMG_20221205_182145_jpg.rf.dd0a82a2272b87774e193fc96b58d7eb.jpg"
+    ],
+    [
+      "images\\train\\maxresdefault_1_jpg.rf.85828f96e004c3a74c9d48602088327b.jpg",
+      "images\\train\\maxresdefault_1_jpg.rf.88eae8a22e6d541d0a1c17f62338e8f7.jpg"
+    ],
+    [
+      "images\\train\\maxresdefault_1_jpg.rf.c5659d9a8548f4bcfdb2b336a72203bf.jpg",
+      "images\\val\\maxresdefault_1_jpg.rf.563303f7bde826e4e8ff4944fa803df7.jpg"
+    ],
+    [
+      "images\\train\\sit-run_jpg.rf.47e69e38703ce30870fa5e6e347f2f37.jpg",
+      "images\\val\\sit-run_jpg.rf.188a45c597d227fce09a3d6aa10baa3e.jpg"
+    ],
+    [
+      "images\\train\\TEKNOFEST-Savasan-IHA-Yarismasi-Bursada-basladi_-1-_jpg.rf.3e9dc15ebc605c48d37531d69535db64.jpg",
+      "images\\train\\TEKNOFEST-Savasan-IHA-Yarismasi-Bursada-basladi_-1-_jpg.rf.62c8d4404d13c28a360217a341a7844b.jpg"
+    ],
+    [
+      "images\\train\\TEKNOFEST-Savasan-IHA-Yarismasi-Bursada-basladi_-1-_jpg.rf.c545a99d673c3fe031b629adc7d18dc7.jpg",
+      "images\\val\\TEKNOFEST-Savasan-IHA-Yarismasi-Bursada-basladi_-1-_jpg.rf.96a3b64edf4afd2146deb8e34d0258a8.jpg"
+    ],
+    [
+      "images\\val\\IMG_20220527_154635_jpg.rf.0ce75767fbe5ea7d0042ea7b4389fcc5.jpg",
+      "images\\val\\IMG_20220527_154635_jpg.rf.8272578b01d79ec288d53de85a4bdf70.jpg"
+    ]
+  ],
+  "invalid_annotations": [],
+  "image_resolutions": {
+    "640x640": 16298
+  },
+  "object_count_per_image": {
+    "1": 15375,
+    "2": 749,
+    "7": 2,
+    "6": 25,
+    "4": 32,
+    "3": 77,
+    "12": 6,
+    "5": 25,
+    "8": 4,
+    "13": 1,
+    "10": 2
+  },
+  "bbox_area_bins": {
+    "medium": 3627,
+    "large": 8198,
+    "small": 3006,
+    "tiny": 2827
+  },
+  "bbox_aspect_bins": {
+    "balanced": 11103,
+    "wide": 4950,
+    "tall": 1605
+  }
+}

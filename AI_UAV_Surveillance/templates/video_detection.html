@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-head"><div><p class="eyebrow">Frame-by-frame Monitoring</p><h1>Video Detection</h1></div></header>
+<section class="panel">
+  <form id="videoUploadForm" method="post" enctype="multipart/form-data" class="upload-row" onsubmit="startVideoProcessing(event)">
+    <input id="videoFileInput" class="form-control" type="file" name="video" accept=".mp4,.avi,.mov,.mkv" required>
+    <button class="btn btn-primary"><i class="fa-solid fa-play"></i> Process</button>
+  </form>
+  <div id="progressBox" class="progress mt-3 d-none"><div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%">Processing video</div></div>
+  <div id="videoError" class="alert alert-danger mt-3 d-none"></div>
+</section>
+<section id="liveVideoPanel" class="content-grid d-none">
+  <div class="panel">
+    <h2>Live Detection Frames</h2>
+    <div id="waitingForFrame" class="video-placeholder">Waiting for first detected frame...</div>
+    <img id="liveVideoFrame" class="video-preview d-none" alt="Live processed detection frame">
+    <div class="frame-toolbar mt-3">
+      <span class="metric-readout" id="liveFrameCounter">Processed frames: 0</span>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Detection Statistics</h2>
+    <p>Status: <strong id="videoJobStatus">Queued</strong></p>
+    <p>Frames Processed: <strong id="videoFramesProcessed">0</strong></p>
+    <p>Unique Objects Detected: <strong id="videoUniqueDetections">0</strong></p>
+    <ul class="list-group list-group-flush" id="videoClassStats"></ul>
+    <a id="processedVideoDownload" class="btn btn-outline-light mt-3 d-none" download><i class="fa-solid fa-download"></i> Download Processed Video</a>
+  </div>
+</section>
+{% if processed_video %}
+<section class="content-grid">
+  <div class="panel">
+    <h2>Frame-by-frame Detection Output</h2>
+    {% set video_name = processed_video.split('/')[-1] %}
+    <img
+      id="frameByFrameViewer"
+      class="video-preview"
+      src="{{ url_for('video_frame', filename=video_name, frame_index=0) }}"
+      data-video="{{ video_name }}"
+      data-index="0"
+      data-total="{{ stats.frames }}"
+      alt="Processed detection frame">
+    <div class="frame-toolbar mt-3">
+      <button class="btn btn-secondary" type="button" onclick="stepVideoFrame(-1)"><i class="fa-solid fa-chevron-left"></i> Previous</button>
+      <button class="btn btn-secondary" type="button" onclick="stepVideoFrame(1)">Next <i class="fa-solid fa-chevron-right"></i></button>
+      <button class="btn btn-outline-light" type="button" onclick="playVideoFrames()"><i class="fa-solid fa-play"></i> Play Frames</button>
+      <button class="btn btn-outline-light" type="button" onclick="pauseVideoFrames()"><i class="fa-solid fa-pause"></i> Pause</button>
+      <span class="metric-readout" id="frameCounter">Frame 1 / {{ stats.frames }}</span>
+    </div>
+    <a class="btn btn-outline-light mt-3" href="{{ url_for('static', filename=processed_video.replace('static/', '')) }}" download><i class="fa-solid fa-download"></i> Download Processed Video</a>
+  </div>
+  <div class="panel"><h2>Detection Statistics</h2>
+    <p>Frames Processed: <strong>{{ stats.frames }}</strong></p>
+    <p>Unique Objects Detected: <strong>{{ stats.detections }}</strong></p>
+    <ul class="list-group list-group-flush">{% for name, count in stats.classes.items() %}<li class="list-group-item">{{ name }} <span>{{ count }}</span></li>{% endfor %}</ul>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

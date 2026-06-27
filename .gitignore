@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large datasets
+data/
+processed_dataset/
+
+# Trained models
+trained_models/
+*.pt
+*.pth
+*.onnx
+
+# Videos
+*.mp4
+*.wmv
+*.avi
+*.mov
+Output_Recording*
+test_video*
+
+# Environment
+venv/
+env/
+.env
+
+# OS Files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

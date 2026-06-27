@@ -1,0 +1,4 @@
+model,precision,recall,f1_score,mAP50,mAP50_95,inference_ms,fps,training_time_min,model_size_mb,score_threshold,detection_mode,metric_note,source_file,speed_score,size_score,surveillance_score
+YOLOv8,0.9487,0.912,0.93,0.9471,0.7292,19.3968,51.5549,352.5836,5.9673,,,,yolov8_metrics.json,1.0,0.9178,0.9516
+SSD,0.712,0.6953,0.7036,0.712,0.712,20.7639,48.1605,3.5177,14.4892,0.7,class_agnostic_uav,SSD is evaluated as a binary UAV detector when detection_mode is class_agnostic_uav.,ssd_metrics.json,0.9342,0.8003,0.7787
+Faster R-CNN,0.4364,0.75,0.5517,0.4364,0.4364,26.9831,37.0603,0.4687,72.5705,,,,faster_rcnn_metrics.json,0.7188,0.0,0.4704

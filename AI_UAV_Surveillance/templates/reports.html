@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-head"><div><p class="eyebrow">Operational Reporting</p><h1>Reports</h1></div></header>
+<section class="panel narrow-panel">
+  <form method="post">
+    <label class="form-label">Report Period</label>
+    <select class="form-select" name="report_type">
+      <option value="daily">Daily Report</option>
+      <option value="weekly">Weekly Report</option>
+      <option value="monthly">Monthly Report</option>
+    </select>
+    <label class="form-label mt-3">Export Format</label>
+    <select class="form-select" name="output_format">
+      <option value="pdf">PDF</option>
+      <option value="excel">Excel</option>
+    </select>
+    <button class="btn btn-primary mt-4"><i class="fa-solid fa-download"></i> Generate Report</button>
+  </form>
+</section>
+{% endblock %}

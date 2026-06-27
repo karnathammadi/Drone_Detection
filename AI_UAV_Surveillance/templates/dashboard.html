@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <p class="eyebrow">Security Surveillance Command</p>
+    <h1>Dashboard Analytics</h1>
+  </div>
+</header>
+
+<section class="stat-grid">
+  <div class="stat-card"><i class="fa-solid fa-upload"></i><span>Total Uploads</span><strong>{{ total_uploads }}</strong></div>
+  <div class="stat-card"><i class="fa-solid fa-crosshairs"></i><span>Total Detections</span><strong>{{ total_detections }}</strong></div>
+  <div class="stat-card"><i class="fa-solid fa-calendar-day"></i><span>Today's Detections</span><strong>{{ today }}</strong></div>
+  <div class="stat-card"><i class="fa-solid fa-bell"></i><span>Recent Alerts</span><strong>{{ recent|length }}</strong></div>
+</section>
+
+<section class="content-grid">
+  <div class="panel"><h2>Class-wise Counts</h2><canvas id="classChart"></canvas></div>
+  <div class="panel"><h2>Detection Trend</h2><canvas id="dailyChart"></canvas></div>
+</section>
+
+<section class="panel">
+  <h2>Recent Alerts</h2>
+  <div class="table-responsive">
+    <table class="table table-dark table-hover align-middle">
+      <thead><tr><th>Time</th><th>Object</th><th>Confidence</th><th>Source</th><th>Evidence</th></tr></thead>
+      <tbody>
+      {% for row in recent %}
+        <tr>
+          <td>{{ row.timestamp }}</td>
+          <td>{{ row.class_name }}</td>
+          <td>{{ "%.2f"|format(row.confidence) }}</td>
+          <td>{{ row.source_type }}</td>
+          <td>{% if row.image_path %}<a href="{{ url_for('static', filename=row.image_path.replace('static/', '')) }}" target="_blank">Open</a>{% endif %}</td>
+        </tr>
+      {% else %}
+        <tr><td colspan="5" class="text-center text-secondary">No alerts recorded.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+renderBarChart("classChart", {{ class_labels|tojson }}, {{ class_values|tojson }});
+renderLineChart("dailyChart", {{ daily_labels|tojson }}, {{ daily_values|tojson }});
+</script>
+{% endblock %}

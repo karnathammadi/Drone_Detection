@@ -1,0 +1,15 @@
+{
+  "model": "SSD",
+  "precision": 0.712,
+  "recall": 0.6953125,
+  "f1_score": 0.7035573122529644,
+  "mAP50": 0.712,
+  "mAP50_95": 0.712,
+  "inference_ms": 20.763885937753912,
+  "fps": 48.16054196202991,
+  "training_time_min": 3.5177266983332327,
+  "model_size_mb": 14.489191055297852,
+  "score_threshold": 0.7,
+  "detection_mode": "class_agnostic_uav",
+  "metric_note": "SSD is evaluated as a binary UAV detector when detection_mode is class_agnostic_uav."
+}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-head"><div><p class="eyebrow">Image Intelligence</p><h1>Image Detection</h1></div></header>
+<section class="panel">
+  <form method="post" enctype="multipart/form-data" class="upload-row">
+    <select class="form-select model-select" name="model_key" aria-label="Detection model">
+      {% for model in model_options %}
+        <option value="{{ model.key }}" {% if model.key == selected_model %}selected{% endif %} {% if not model.available %}disabled{% endif %}>
+          {{ model.label }}{% if not model.available %} (model file missing){% endif %}
+        </option>
+      {% endfor %}
+    </select>
+    <input class="form-control" type="file" name="image" accept=".jpg,.jpeg,.png,.bmp" required>
+    <button class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Detect</button>
+  </form>
+</section>
+{% if result %}
+<section class="content-grid">
+  <div class="panel"><h2>Detection Preview</h2><img class="preview-img" src="{{ url_for('static', filename=result.replace('static/', '')) }}" alt="Detection result"></div>
+  <div class="panel"><h2>Detection Output</h2>
+    {% if summary %}
+    <div class="summary-grid">
+      <div><span>Total Objects</span><strong>{{ summary.total_objects }}</strong></div>
+      <div><span>Avg Confidence</span><strong>{{ "%.2f"|format(summary.average_confidence) }}</strong></div>
+      <div><span>Max Confidence</span><strong>{{ "%.2f"|format(summary.max_confidence) }}</strong></div>
+    </div>
+    {% endif %}
+    <table class="table table-dark">
+      <thead><tr><th>Class</th><th>Confidence</th><th>Bounding Box</th><th>Detection Time</th></tr></thead>
+      <tbody>{% for d in detections %}<tr><td>{{ d.class_name }}</td><td>{{ "%.2f"|format(d.confidence) }}</td><td>{{ d.bbox }}</td><td>{{ "%.1f ms"|format(d.detection_time_ms) }}</td></tr>{% endfor %}</tbody>
+    </table>
+    {% if summary and summary.class_counts %}
+    <h2>Class Counts</h2>
+    <ul class="list-group">
+      {% for class_name, count in summary.class_counts.items() %}
+        <li class="list-group-item"><span>{{ class_name }}</span><strong>{{ count }}</strong></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

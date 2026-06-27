@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="page-head"><div><p class="eyebrow">Evidence Log</p><h1>Detection History</h1></div><a class="btn btn-outline-light" href="{{ url_for('export_history') }}"><i class="fa-solid fa-file-csv"></i> Export CSV</a></header>
+<section class="panel">
+  <form class="upload-row" method="get">
+    <input class="form-control" name="search" value="{{ search }}" placeholder="Search class or source">
+    <button class="btn btn-primary"><i class="fa-solid fa-search"></i> Search</button>
+  </form>
+  <div class="table-responsive mt-3">
+    <table class="table table-dark table-hover align-middle">
+      <thead><tr><th>ID</th><th>Time</th><th>Class</th><th>Confidence</th><th>Source</th><th>Detection Time</th><th>Frame</th><th></th></tr></thead>
+      <tbody>
+      {% for row in rows %}
+        <tr>
+          <td>{{ row.id }}</td><td>{{ row.timestamp }}</td><td>{{ row.class_name }}</td><td>{{ "%.2f"|format(row.confidence) }}</td><td>{{ row.source_type }}</td><td>{{ "%.1f ms"|format(row.detection_time_ms or 0) }}</td>
+          <td>{% if row.image_path %}<a href="{{ url_for('static', filename=row.image_path.replace('static/', '')) }}" target="_blank">Open</a>{% endif %}</td>
+          <td><form method="post" action="{{ url_for('delete_history', detection_id=row.id) }}"><button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button></form></td>
+        </tr>
+      {% else %}
+        <tr><td colspan="8" class="text-center text-secondary">No records found.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
